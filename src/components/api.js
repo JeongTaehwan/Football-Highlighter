@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import styled from 'styled-components';
 
 function api() {
     return (
@@ -11,3 +10,5 @@ function api() {
 }
 
 export default api;
+
+// https://geek-jokes.sameerkumar.website/api?format=json: api 주소
