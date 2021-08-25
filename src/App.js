@@ -1,10 +1,10 @@
 import React from 'react';
-import api from './components/Api';
+import Api from './components/Api';
 
 function App() {
   return (
     <div>
-      <api />
+      <Api />
     </div>
   );
 }
