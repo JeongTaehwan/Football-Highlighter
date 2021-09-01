@@ -32,9 +32,9 @@ function Api() {
 
     return (
         <ul>
-            {infos.map(infos => (
+            {infos.response.map(infos => (
                 <li key={infos.title}>
-                    {infos.title}
+                    {infos.title} ({infos.competition})
                 </li>
             ))}
         </ul>
