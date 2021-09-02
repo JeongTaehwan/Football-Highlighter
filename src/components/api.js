@@ -27,7 +27,7 @@ function Api() {
         fetchInfo();
     }, []);
 
-    if (loading) return <div>로딩중...</div>
+    if (loading) return <S.Loading><div>로딩중...</div></S.Loading>
     if (error) return <div>에러가 발생하였습니다.</div>
     if (!infos) return null;
 
@@ -37,7 +37,7 @@ function Api() {
                 <ul>
                     {infos.response.map(infos => (
                         <li key={infos.title} className="">
-                            {infos.title} ({infos.competition}) <br />
+                            <p>{infos.title} ({infos.competition})</p>  <br />
                             <img src={infos.thumbnail} alt="썸네일" className="image" />
                         </li>
                     ))}
