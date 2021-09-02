@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import * as S from './style.js';
+import logo from './img/logo.png';
 
 function Api() {
     const [loading, setLoading] = useState(false);
@@ -31,13 +33,25 @@ function Api() {
     if (!infos) return null;
 
     return (
-        <ul>
-            {infos.response.map(infos => (
-                <li key={infos.title}>
-                    {infos.title} ({infos.competition})
-                </li>
-            ))}
-        </ul>
+        <>
+            <S.Header>
+                <img src={logo} alt="logo" className="logo" />
+                <nav>
+                    <ul>
+                        <li>홈으로</li>
+                        <li>하이라이트 영상</li>
+                    </ul>
+                </nav>
+            </S.Header>
+            {/* <ul>
+                {infos.response.map(infos => (
+                    <li key={infos.title}>
+                        {infos.title} ({infos.competition}) <br />
+                        <img src={infos.thumbnail} alt="썸네일" />
+                    </li>
+                ))}
+            </ul> */}
+        </>
     );
 }
 
