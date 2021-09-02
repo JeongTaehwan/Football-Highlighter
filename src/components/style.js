@@ -12,7 +12,20 @@ export const Header = styled.div`
 
     li {
         font-size: 18px;
+        color: black;
         display: inline-block;
         margin-left: 20vh;
+
+        &:hover {
+            color: red; 
+            transition: 0.2s;
+        }
+    }
+`;
+
+export const ApiKit = styled.div`
+    .image {
+        width: 400px;
+        height: 250px;
     }
 `;

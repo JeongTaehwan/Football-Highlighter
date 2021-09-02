@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import * as S from './style.js';
-import logo from './img/logo.png';
 
 function Api() {
     const [loading, setLoading] = useState(false);
@@ -34,27 +33,20 @@ function Api() {
 
     return (
         <>
-            <S.Header>
-                <img src={logo} alt="logo" className="logo" />
-                <nav>
-                    <ul>
-                        <li>홈으로</li>
-                        <li>하이라이트 영상</li>
-                    </ul>
-                </nav>
-            </S.Header>
-            {/* <ul>
-                {infos.response.map(infos => (
-                    <li key={infos.title}>
-                        {infos.title} ({infos.competition}) <br />
-                        <img src={infos.thumbnail} alt="썸네일" />
-                    </li>
-                ))}
-            </ul> */}
+            <S.ApiKit>
+                <ul>
+                    {infos.response.map(infos => (
+                        <li key={infos.title} className="">
+                            {infos.title} ({infos.competition}) <br />
+                            <img src={infos.thumbnail} alt="썸네일" className="image" />
+                        </li>
+                    ))}
+                </ul>
+            </S.ApiKit>
         </>
     );
 }
 
 export default Api;
-// https://geek-jokes.sameerkumar.website/api?format=json: api 주소
+
 // https://www.scorebat.com/video-api/v3/ : api 주소 2
