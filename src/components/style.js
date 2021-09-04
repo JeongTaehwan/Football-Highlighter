@@ -32,12 +32,39 @@ export const Loading = styled.div`
 
     font-weight: bold;
     font-size: 54px;
-    color: #ff8787;
+    color: #495057;
 `;
 
 export const ApiKit = styled.div`
     .image {
         width: 400px;
         height: 250px;
+    }
+
+    .wrapper {
+        display: inline-block;
+        margin-left: 2vh;
+
+    }
+
+    .title {
+        font-size: 2vh;
+        font-weight: bold;
+        color: #495057;
+    }
+`;
+
+export const Content = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 31vh;
+
+    .MainText {
+        font-size: 5vh;
+    }
+
+    .SubText {
+        font-size: 3vh;
     }
 `;

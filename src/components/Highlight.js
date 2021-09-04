@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import * as S from './style.js';
+import logo from './img/logo.png'
+import { Link } from 'react-router-dom';
 
 function Api() {
     const [loading, setLoading] = useState(false);
@@ -27,17 +29,26 @@ function Api() {
         fetchInfo();
     }, []);
 
-    if (loading) return <S.Loading><div>로딩중...</div></S.Loading>
+    if (loading) return <S.Loading><div>로딩중 ⚽️</div></S.Loading>
     if (error) return <div>에러가 발생하였습니다.</div>
     if (!infos) return null;
 
     return (
         <>
+            <S.Header>
+                <img src={logo} alt="logo" className="logo" />
+                <nav>
+                    <ul>
+                        <Link to="/home"><li>홈으로</li></Link>
+                        <Link to="/highlight"><li>하이라이트 영상</li></Link>
+                    </ul>
+                </nav>
+            </S.Header>
             <S.ApiKit>
                 <ul>
                     {infos.response.map(infos => (
-                        <li key={infos.title} className="">
-                            <p>{infos.title} ({infos.competition})</p>  <br />
+                        <li key={infos.title} className="wrapper">
+                            <p className="title">{infos.title}</p>  <br />
                             <img src={infos.thumbnail} alt="썸네일" className="image" />
                         </li>
                     ))}

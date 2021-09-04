@@ -15,6 +15,12 @@ function Home() {
                     </ul>
                 </nav>
             </S.Header>
+            <S.Content>
+                <div>
+                    <h1 className="MainText">Football Highlighter</h1>
+                    <p className="SubText">다양한 하이라이트를 한 번에</p>
+                </div>
+            </S.Content>
         </>
     )
 }

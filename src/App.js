@@ -1,13 +1,13 @@
 import React from 'react';
 import { Route } from 'react-router';
-import Api from './components/Api';
+import Highlight from './components/Highlight';
 import Home from './components/Home';
 
 function App() {
   return (
     <div>
-      <Home path="/home" />
-      <Route path="/highlight" exact component={Api} />
+      <Route path="/home" exact component={Home} />
+      <Route path="/highlight" exact component={Highlight} />
     </div>
   );
 }
