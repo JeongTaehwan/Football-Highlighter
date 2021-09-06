@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+import "animate.css"
+import styled, { keyframes } from 'styled-components';
 
 export const Header = styled.div`
     display: flex;
@@ -8,6 +9,7 @@ export const Header = styled.div`
 
     ul {
         list-style-type: none;
+        
     }
 
     li {
@@ -15,7 +17,7 @@ export const Header = styled.div`
         font-weight: bold;
         color: #495057;
         display: inline-block;
-        margin-left: 20vh;
+        margin-left: 10vh;
 
         &:hover {
             color: #ff8787; 
@@ -41,10 +43,10 @@ export const ApiKit = styled.div`
         height: 250px;
     }
 
-    .wrapper {
+    .api_li {
         display: inline-block;
         margin-left: 2vh;
-
+        list-style: none;
     }
 
     .title {
@@ -54,11 +56,28 @@ export const ApiKit = styled.div`
     }
 `;
 
-export const Content = styled.div`
+
+const Contentfade = keyframes`
+    0% {
+    opacity: 1;
+    }
+    50% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+`;
+
+const StyleWrapper = styled.div`
+    
+`;
+
+export const Text = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 31vh;
+    margin-top: 28vh;
 
     .MainText {
         font-size: 5vh;
@@ -66,5 +85,7 @@ export const Content = styled.div`
 
     .SubText {
         font-size: 3vh;
+        margin-left: 8%;
+        margin-right: 8%;
     }
 `;

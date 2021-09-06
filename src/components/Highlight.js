@@ -45,14 +45,16 @@ function Api() {
                 </nav>
             </S.Header>
             <S.ApiKit>
-                <ul>
-                    {infos.response.map(infos => (
-                        <li key={infos.title} className="wrapper">
-                            <p className="title">{infos.title}</p>  <br />
-                            <img src={infos.thumbnail} alt="썸네일" className="image" />
-                        </li>
-                    ))}
-                </ul>
+                <div>
+                    <ul>
+                        {infos.response.map(infos => (
+                            <li key={infos.title} class="api_li">
+                                <p className="title">{infos.title}</p>  <br />
+                                <img src={infos.thumbnail} alt="썸네일" className="image" />
+                            </li>
+                        ))}
+                    </ul>
+                </div>
             </S.ApiKit>
         </>
     );
