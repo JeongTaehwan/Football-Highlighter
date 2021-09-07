@@ -1,4 +1,3 @@
-import "animate.css"
 import styled, { keyframes } from 'styled-components';
 
 export const Header = styled.div`
@@ -30,7 +29,7 @@ export const Loading = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 38vh;
+    margin-top: 42vh;
 
     font-weight: bold;
     font-size: 54px;
@@ -56,21 +55,13 @@ export const ApiKit = styled.div`
     }
 `;
 
-
-const Contentfade = keyframes`
+const TextKeyframes = keyframes`
     0% {
-    opacity: 1;
-    }
-    50% {
-    opacity: 0;
+        opacity: 0%;
     }
     100% {
-    opacity: 1;
+        opacity: 100%;
     }
-`;
-
-const StyleWrapper = styled.div`
-    
 `;
 
 export const Text = styled.div`
@@ -87,5 +78,10 @@ export const Text = styled.div`
         font-size: 3vh;
         margin-left: 8%;
         margin-right: 8%;
+    }
+
+    .text {
+        animation: ${TextKeyframes};
+        animation-duration: 1.5s;
     }
 `;

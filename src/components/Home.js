@@ -17,8 +17,8 @@ function Home() {
             </S.Header>
             <S.Text>
                 <div className="wrapper">
-                    <p className="MainText animate__animated animate__bounce">Football Highlighter</p>
-                    <p className="SubText">다양한 하이라이트를 한 번에</p>
+                    <p className="MainText text">Football Highlighter</p>
+                    <p className="SubText text">다양한 하이라이트를 한 번에</p>
                 </div>
             </S.Text>
         </>
