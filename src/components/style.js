@@ -82,6 +82,10 @@ export const Text = styled.div`
 
     .text {
         animation: ${TextKeyframes};
-        animation-duration: 1.5s;
+        animation-duration: 2s;
     }
+`;
+
+export const Choose = styled.div`
+
 `;
