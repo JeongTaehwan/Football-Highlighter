@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import * as S from './style.js';
 import logo from './img/logo.png'
+import arrow from './img/downArrow.png';
 import { Link } from 'react-router-dom';
 
 function Api() {
@@ -45,7 +46,13 @@ function Api() {
                 </nav>
             </S.Header>
             <S.Choose>
-
+                <div className="dropdown">
+                    <button className="dropbtn">최신 <img src={arrow} alt="" /></button>
+                    <div className="dropdown-content">
+                        <a href={() => false}>국가별</a>
+                        <a href={() => false}>리그별</a>
+                    </div>
+                </div>
             </S.Choose>
             <S.ApiKit>
                 <div>
