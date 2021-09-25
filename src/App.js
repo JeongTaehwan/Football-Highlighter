@@ -12,7 +12,7 @@ function App() {
   return (
     <div>
       <GlobalStyle />
-      <Route path="/home" component={Home} />
+      <Route path="/" exact component={Home} />
       <Route path="/highlight" exact component={Highlight} />
     </div>
   );
