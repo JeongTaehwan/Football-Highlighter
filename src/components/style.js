@@ -85,7 +85,3 @@ export const Text = styled.div`
         animation-duration: 2s;
     }
 `;
-
-export const Choose = styled.div`
-    
-`;

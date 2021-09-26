@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import * as S from './style.js';
-import * as I from '../components/Asset/index';
+import * as I from '../Asset/index';
 import { Link } from 'react-router-dom';
 
 function Api() {
@@ -29,7 +29,7 @@ function Api() {
         fetchInfo();
     }, []);
 
-    if (loading) return <S.Loading><div>로딩중 ⚽️</div></S.Loading>
+    if (loading) return <S.Loading>로딩중 ⚽️</S.Loading>
     if (error) return <div>에러가 발생하였습니다.</div>
     if (!infos) return null;
 
@@ -39,13 +39,11 @@ function Api() {
                 <I.Logo />
                 <nav>
                     <ul>
-                        <Link to="/home"><li>홈으로</li></Link>
+                        <Link to="/"><li>홈으로</li></Link>
                         <Link to="/highlight"><li>하이라이트 영상</li></Link>
                     </ul>
                 </nav>
             </S.Header>
-            <S.Choose>
-            </S.Choose>
             <S.ApiKit>
                 <div>
                     <ul>

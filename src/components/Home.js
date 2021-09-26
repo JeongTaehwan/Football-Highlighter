@@ -1,6 +1,6 @@
 import React from 'react';
 import * as S from './style.js';
-import * as I from '../components/Asset/index';
+import * as I from '../Asset/index';
 import { Link } from 'react-router-dom';
 
 function Home() {
