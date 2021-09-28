@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import * as S from '../Home/style';
 import * as I from '../../Asset/index';
 import { Link } from 'react-router-dom';

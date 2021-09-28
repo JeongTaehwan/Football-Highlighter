@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import * as S from '../Highlgiht/style';
+import * as HS from '../Home/style';
 import * as I from '../../Asset/index';
 import { Link } from 'react-router-dom';
 
@@ -26,12 +27,33 @@ function Highlight() {
         fetchInfo();
     }, []);
 
-    if (loading) return <div>로딩중 ⚽️</div>
+    if (loading) return <S.Loading>로딩중 ⚽️</S.Loading>
     if (error) return <div>에러가 발생하였습니다.</div>
     if (!infos) return null;
 
     return (
         <>
+            <HS.HeaderWrapper>
+                <I.Logo />
+                <HS.NaviUl>
+                    <Link to="/">
+                        <HS.NaviLi>홈으로</HS.NaviLi>
+                    </Link>
+                    <Link to="/highlight">
+                        <HS.NaviLi>하이라이트 영상</HS.NaviLi>
+                    </Link>
+                </HS.NaviUl>
+            </HS.HeaderWrapper>
+            <S.ApiWrapper>
+                <S.ApiUl>
+                    {infos.response.map(infos => (
+                        <S.ApiLi key={infos.title}>
+                            <p className="title">{infos.title}</p>  <br />
+                            <img src={infos.thumbnail} alt="썸네일" className="image" />
+                        </S.ApiLi>
+                    ))}
+                </S.ApiUl>
+            </S.ApiWrapper>
         </>
     );
 }
