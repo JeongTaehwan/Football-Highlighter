@@ -10,18 +10,18 @@ export const ApiUl = styled.ul`
 
 export const ApiLi = styled.li`
     display: inline-block;
-    margin-left: 5vh;
+    margin-left: 4vh;
     list-style: none;
 
     .title {
-        font-size: 1.7vh;
+        font-size: 2vh;
         font-weight: bold;
         color: #495057;
         margin-bottom: 1vh;
     }
 
     .image {
-        width: 30vh;
+        width: 40vh;
         height: 25vh;
     }
 `;
