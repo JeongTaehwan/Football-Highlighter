@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route } from 'react-router';
 import { createGlobalStyle } from 'styled-components';
-import Highlight from './components/Highlight';
-import Home from './components/Home';
+import Highlight from './components/Highlgiht/Highlight';
+import Home from './components/Home/Home';
 
 const GlobalStyle = createGlobalStyle`
   background-color:  #E0E0E0;
