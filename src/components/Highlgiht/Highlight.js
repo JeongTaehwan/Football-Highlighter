@@ -45,6 +45,12 @@ function Highlight() {
                 </HS.NaviUl>
             </HS.HeaderWrapper>
             <S.ApiWrapper>
+                <S.DropDownWrapper>
+                    <S.DropButton>최신순</S.DropButton>
+                    <S.DropDownContents>
+                        <a href="#!">국가별</a>
+                    </S.DropDownContents>
+                </S.DropDownWrapper>
                 <S.ApiUl>
                     {infos.response.map(infos => (
                         <S.ApiLi key={infos.title}>

@@ -11,7 +11,6 @@ export const HeaderWrapper = styled.div`
 export const NaviUl = styled.ul`
     display: flex;
     list-style-type: none;
-    text-decoration:none;
 `;
 
 export const NaviLi = styled.li`
